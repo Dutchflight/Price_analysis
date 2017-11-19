@@ -1,0 +1,14 @@
+from bs4 import BeautifulSoup
+import urllib
+import pandas as pd
+import urllib2
+from bs4 import BeautifulSoup
+import datetime
+
+#### BENIZINEPRIJZEN ####
+
+# Landelijk gemiddelde benzineprijs
+response2 = urllib2.urlopen('https://www.unitedconsumers.com/tanken/')
+soup2 = BeautifulSoup(response2,"html.parser")
+test2 = soup2.find('table', class_='table tabel-01')
+print(test2.text)[38:45]
